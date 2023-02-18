@@ -1,1 +1,9 @@
-<p>payments works!</p>
+<form #loginForm="ngForm" (submit)="checkLogin(loginForm)">
+    <input type="text" [(ngModel)]="firstname" name="firstname" required><br/>
+    <input type="checkbox" [(ngModel)]="terms" name="terms" required>Accept Terms & Condition<br/>
+    <button type="submit" [disabled]="!loginForm.valid">Login</button><br/>
+    <textarea [(ngModel)]="description" name="description"></textarea>
+    <button class = "btn btn-primary" (click)="setValue(loginForm)">SetValue</button><br/>
+    
+</form>
+<div>{{firstname}}</div>

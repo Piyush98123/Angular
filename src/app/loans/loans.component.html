@@ -1,1 +1,18 @@
-<p>loans works!</p>
+<form [formGroup] = "addLoanForm">
+  <div class="form-group">
+    <label>
+        LoanName</label>
+<input type="text" formControlName="loanName">
+  </div>  
+<div class="form-group">
+    <label>
+        Loan Type</label>
+    <input type="text" formControlName="loanType">    
+</div>
+<div class="form-group">
+    <label>
+        Loan Desc</label>
+    <textarea formControlName = "loanDesc"></textarea>    
+</div>
+<button type="submit" (click)="addLoad()">Add Loan</button>
+</form>
